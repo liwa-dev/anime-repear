@@ -1,0 +1,167 @@
+
+
+
+.containerDashboard {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+.watchrndm.disabled {
+    pointer-events: none;
+    background: rgb(181 181 181);
+    transition: var(--tran-03);
+}
+  
+  .content {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding: 5%;
+    z-index: 1; /* Set the z-index of the .content element to be higher than the default */
+
+  }
+  
+  .background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+  }
+
+  .background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    background-image: url('https://www.fortressofsolitude.co.za/wp-content/uploads/2022/11/Top-10-Best-Anime-Series-Of-All-Time-Ranked-scaled.jpeg');
+    background-size: cover;
+     filter: grayscale(100%) blur(1px) brightness(50%);
+    -webkit-filter: grayscale(100%) blur(1px) brightness(50%);
+    -moz-filter: grayscale(100%) blur(1px) brightness(50%); 
+  }
+
+  .watchrndm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 200px;
+    z-index: 99;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    transition: var(--tran-03);
+    border-radius: 50px;
+    background-color: var(--sidebar-color);
+    border: transparent solid;
+  }
+
+  .watchrndm i,
+  .watchrndm span {
+    font-size: 16px;
+  }
+  
+
+  .watchrndm:hover {
+    cursor: pointer;
+    border: var(--primary-color) solid;
+  }
+  .content img {
+    margin-right: 15px;
+    position: relative;
+    bottom: 100px;
+    float: left;
+    width: 300px;
+    animation: movement 50s ease infinite;
+  }
+
+
+  @keyframes movement {
+    0% {
+      transform: translate(20px,-20px);
+    }
+    50% {
+      transform: translate(0,0);
+    }
+    100% {
+      transform: translate(20px,-20px);
+    }
+  }
+
+  .content h3,
+  .content p {
+    margin-left: 15px;
+    max-height: 200px;
+    display: block;
+    color: white;
+    margin: 2px 0 0 0;
+  }
+  
+  .content p {
+    font-size: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .recommandation {
+    padding: 50px;
+    width: 100%;
+    color: var(--primary-color);
+  }
+  .ongoing {
+    padding: 50px;
+    width: 100%;
+    color: var(--primary-color);
+  }
+
+  .scalemsglow {
+    display: none !important;
+}
+.effecttextmsg {
+  color: var(--text-primary);
+  transition: var(--tran-03);
+  font-weight: 200;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+  .flex-column {
+    flex-direction: column;
+  }
+  .homebg {
+    filter: grayscale(100%) brightness(31%) saturate(69%);
+-webkit-filter: grayscale(100%) brightness(31%) saturate(69%);
+-moz-filter: grayscale(100%) brightness(31%) saturate(69%);
+width: 100%;
+height: 100%;
+position: fixed;
+  }
+
+  .sectionContainerHome {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    flex-direction: column;
+  }
+
+.cardhome {
+  display: flex;
+  overflow-x: auto;
+  background-color: var(--sidebar-color);
+  transition: var(--tran-05);
+  border-radius: 5px;
+
+}
+
+.latestvideo {
+    margin-left: 15px;
+    display: flex;
+}

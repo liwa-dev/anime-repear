@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Startup from './components/startup';
+import Dashboard from './components/dashboard';
+import { useState } from 'react';
 
 function App() {
+  // Add a state variable to track if the startup animation has finished
+  const [startupFinished, setStartupFinished] = useState(false);
+
+  // Define a function to handle the startup animation finish event
+  const handleStartupFinish = () => {
+    setStartupFinished(true);
+  };
+
+  // Render the routes conditionally based on the startup status
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Startup onFinish={handleStartupFinish} />} />
+        {startupFinished ? (
+          <Route path="/dashboard/*" element={<Dashboard />} />
+        ) : (
+          <Route
+            path="/dashboard/*"
+            element={<Navigate to="/" replace />}
+          />
+        )}
+        <Route path="/*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,69 @@
+
+
+.watermark {
+    width: 18px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    opacity: .5;
+
+}
+
+.card {
+    --size: 200px;
+    width: var(--size);
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background 320ms;
+}
+
+.card:hover {
+    background: #242424;
+}
+
+.cover {
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    background: red;
+    box-shadow: 
+    0 4px 16px rgba(0,0,0,0.4),
+    0 4px 18px rgba(0,0,0,0.2);
+}
+
+.pb-wrapper {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    opacity: 0;
+    transform: 320ms;
+}
+
+.card:hover .pb-wrapper {
+    bottom: 1rem;
+    opacity: 1;
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--green);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.3);
+
+}
+
+.p1-name {
+    font-size: 1rem;
+    margin-bottom: .4rem;
+
+}
+.p1-about {
+    font-size: 0.9375rem;
+    color: var(--lightblack);
+}

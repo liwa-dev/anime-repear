@@ -1,0 +1,36 @@
+:root {
+
+    /* COLORS */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: rgb(229, 43, 80);
+    --primary-light: rgba( 229, 43, 80, 0.1 );
+    --secondly-color: #b32441;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --text-primary: #000;
+    --blur-panel: rgba( 255, 255, 255, 0.3 );
+    --color-odd: #f6f6f6;
+
+    /* TRANSITIONS */
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body.dark {
+    /* COLORS */
+    --body-color: #18191A;
+    --sidebar-color: #242526;
+    --primary-color: #E52B50;
+    --secondly-color: #b32441;
+    --primary-color-light: #3A3B3C;
+    --toggle-color: #FFF;
+    --text-color: #CCC;
+    --text-primary: #FFF;
+    --blur-panel: rgba( 0, 0, 0, 0.3 );
+    --color-odd : #303030;
+}

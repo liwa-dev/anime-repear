@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+@font-face {
+    font-family: "vision";
+    src: local("font"),
+      url("./fonts/font.ttf") format("truetype");
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyT {
+    background: var(--body-color) !important;
+    overflow: auto !important;
+}
+
+body {
+    height: 100vh;
+    transition: var(--tran-05);
+}
+
+/* +++ Resuable CSS +++ */
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+
+.menu-links {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+
+    height: 50%;
+}
+
+
+.cardhome::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 2px;
+    transition: var(--tran-05);
+  }
+  
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--body-color); 
+  border-radius: 10px;
+  transition: box-shadow var(--tran-05); /* Animate the background-color property */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 10px;
+  transition: background-color var(--tran-05); /* Animate the background-color property */
+}
+  
+
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* +++ Sidebar +++ */
+
+.sidebar-startup {
+    top: 0 !important;
+}
+.sidebar {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+
+.sidebar.close {
+    width: 80px;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .image-text {
+    overflow: hidden;
+}
+.sidebar.close .logoImage {
+    transform: scale(2.5) !important;
+    left: 0px !important;
+    background-image: url("./imgs/small-logo.png") !important;
+}
+.sidebar .image-text .logoImage {
+    width: 70%;
+    left: 70px;
+    top: 30px;
+    margin-bottom: 25px;
+    margin-top: -30px;
+    position: relative;
+    object-fit: cover;
+    padding: 0;
+    transition: var(--tran-03);
+    background: url('./imgs/logodark.png') center center no-repeat;
+    background-size: contain;
+    height: 100px;
+    transform: scale(6);
+}
+  
+body.dark .image-text .logoImage {
+    background-image: url("./imgs/logo.png");
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+
+}
+
+
+header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profession {
+    margin-top: -2px;
+}
+
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+    transition: var(--tran-03);
+}
+
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotateY(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+    cursor: pointer;
+
+
+}
+
+
+.sidebar .menu {
+    margin-top: 35px;
+}
+
+
+.sidebar .search-box {
+    background: var(--primary-color-light);
+    border-radius: 6px;
+    transition: var(--tran-05);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--tran-05);
+
+}
+
+.rs-btn {
+    background-color: var(--primary-color) !important;
+}
+.menuAvatar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.moveIconLitte {
+    position: relative;
+    left: -20px;
+}
+
+
+.menuAvatar li {
+    padding: 5px;
+}
+.avatarGuest.menubar {
+    width: 30px;
+    transform: translate(-50%);
+}
+
+.rs-dropdown-item:focus-visible,
+.rs-dropdown-item.rs-dropdown-item-focus {
+    background: var(--primary-light) !important;
+  color: var(--primary-color) !important;
+}
+
+.search-box input::placeholder {
+    font-size: 9px;
+    font-weight: bold;
+}
+.sidebar li .aHref {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li .aHref:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li .aHref.active {
+    background: var(--primary-color);
+}
+
+.sidebar li .aHref.active .icon,
+.sidebar li .aHref.active .text
+{
+    color: var(--sidebar-color);
+}
+
+.sidebar li .aHref:hover .icon,
+.sidebar li .aHref:hover .text {
+    color: var(--sidebar-color);
+}
+
+body.dark .sidebar li .aHref:hover .icon,
+body.dark .sidebar li .aHref:hover .text {
+    color: var(--text-color);
+}
+
+
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.menu-bar .mode {
+    position: relative;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+
+}
+
+.menu-bar .mode .moon-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+    opacity: 0;
+}
+
+
+
+.menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+    left: 25px;
+}
+
+
+.home {
+    position: relative;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    transition: var(--tran-05);
+    background: var(--body-color);
+}
+
+.home .textPath {
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 40px;
+    z-index: 200;
+    position: relative;
+}
+
+.search-box a {
+    display: contents;
+}
+
+.textPath ol {
+    list-style: none;
+    text-decoration: none;
+}
+.textPath li {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+
+.textPath li:nth-child(2) {
+    display: none;
+}
+
+.textPath li:nth-child(3) {
+    display: none;
+}
+
+.textPath li {
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.textPath li .hre {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.textPath li .hre:hover {
+    color: var(--primary-color);
+}
+
+.sidebar.close ~ .home {
+    left: 80px;
+    width: calc(100% - 88px);
+}
+
+.sidebar.close .profession,
+.sidebar.close .name {
+    user-select: none;
+}

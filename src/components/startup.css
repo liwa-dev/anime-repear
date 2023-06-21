@@ -1,0 +1,252 @@
+body {
+    background: #18191A !important;
+    overflow: hidden !important;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: perspective(1000px) rotateX(-150deg) rotateY(160deg) rotate(-9.8deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotate(0deg);
+    }
+}
+
+
+
+.logo {
+    image-rendering: pixelated;
+    transform: perspective(1000px) rotateX(-187deg) rotateY(193deg) rotate(-9.8deg);
+    animation: rotateAnimation 2s ease-in-out forwards;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    animation-delay: .2s;
+    /* Delay the scale animation by 1 second */
+}
+
+.containerhide {
+    top: 500% !important;
+} 
+
+.startup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    top: 0%;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 1s ease-in-out, top 4s ease-in-out;
+}
+
+.float {  
+    animation-name: ani-float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 80%;
+    bottom: 20%;
+    opacity: .25;
+    animation-timing-function: ease-in-out; 
+  }
+
+
+  .rotate {  
+    animation-name: ani-rotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    opacity: .25;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+
+  @keyframes ani-rotate {
+    0%{ transform: rotate(0); }
+    100%{ transform: rotate(360deg); }  
+  }
+ 
+
+  @keyframes ani-float {
+    0% { transform: translate(0,  0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }    
+  }
+
+.scale {
+    z-index: 2;
+    transform: scale(500);
+    animation: scaleAnimation 1.3s ease forwards;
+}
+
+@keyframes scaleAnimation {
+    from {
+        opacity: 0;
+        transform: scale(500);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(.3);
+    }
+}
+
+
+@keyframes effectAnimation1 {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+
+    25% {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateX(20deg) rotateY(-10deg);
+    }
+
+    70% {
+        transform: perspective(1000px) rotateX(20deg) rotateY(30deg);
+    }
+
+    85% {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(-20deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+
+@keyframes effectAnimation2 {
+    0% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+
+    25% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(-10deg) rotateY(10deg);
+    }
+
+    50% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(10deg) rotateY(-10deg);
+    }
+
+    70% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(10deg) rotateY(10deg);
+    }
+
+    85% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(-10deg) rotateY(-10deg);
+    }
+
+    100% {
+        transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+
+.bgstartup {
+    position: absolute;
+
+    
+    width: 100%;
+    height: 100%;
+}
+
+.shadow {
+    position: absolute;
+    top: 50%;
+    width: 565px;
+    height: 257px;
+    transform: skewX(25deg) skewY(-4deg) perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transform-origin: top;
+    right: -25px;
+    top: 515px;
+    opacity: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 1s ease-in-out;
+
+}
+
+
+.effect {
+    animation: effectAnimation1 12s ease-in-out infinite;
+}
+
+.effect2 {
+    animation: effectAnimation2 12s ease-in-out infinite;
+}
+
+
+.end {
+    animation: rotateAnimation 1.7s reverse forwards;
+}
+
+@keyframes scaleAnime {
+    from {
+        opacity: 0;
+        transform: scale(1000);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(.3);
+    }
+}
+
+.end2 {
+    opacity: 1;
+    transform: scale(.3);
+    animation: scaleAnime 2s reverse forwards;
+    animation-delay: .6s;
+}
+
+.ocean { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -82px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 52s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -65px;
+    animation: wave 32s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }

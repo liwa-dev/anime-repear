@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+body {
+  background-color: var(--black);
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--lightblack);
+  border-radius: 10px;
+}
+nav {
+  left: 5px;
+  width: 20%;
+  background-color: var(--black);
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+li a i {
+  padding: 10px;
+  font-size: 20px;
+}
+li a {
+  display: block;
+  color: var(--hoverno);
+  padding: 10px;
+  margin: 15px;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li a:hover {
+  color: var(--hoveryes);
+}
+
+
+.redo-undo {
+  position: relative;
+  color: var(--hoverno);
+  padding: 10px;
+  margin-left: 30px;
+
+}
+
+.redo-undo i:hover {
+  color: var(--hoveryes);
+}
+
+.redo-undo i {
+  margin: 10px;
+  font-size: 20px;
+}
+
+main {
+  height: 100vh;
+  border-radius: 15px;
+  background-color: var(--lightblack);
+  margin-left: 22%;
+  padding: 1px 16px;
+
+}
+iframe {
+  width: 100%;
+  height: 90%;
+  /* border: none; */
+}
+
+.search-bar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  height: 40px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px;
+  float: right;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input {
+  flex: 1;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Style the search icon */
+.search-bar i.fa-search {
+  color: #555;
+  font-size: 20px;
 }

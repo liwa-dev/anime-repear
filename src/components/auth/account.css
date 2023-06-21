@@ -1,0 +1,114 @@
+.container-account {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 20px;
+    background: var(--blur-panel);
+    box-shadow: 0 8px 32px 0 #E52B505e;
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 5px;
+    transition: var(--tran-05);
+  }
+
+  .css-1e6y48t-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+    background-color: #821a2f !important;
+  }
+
+
+  .offscreen {
+    display: none;
+    user-select: none;
+  }
+
+
+  .avatarGuest {
+    width: 80px;
+    border-radius: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .instructions {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    user-select: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .account-text {
+    color: var(--text-primary);
+    transition: var(--tran-02);
+  }
+  .account-text:hover {
+    color: #c2c0c0;
+  }
+
+
+  .account-select {
+    color: var(--secondly-color);
+  }
+  .account-form {
+    padding: 10px;
+}
+
+.btn-register {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.forgot-password {
+    user-select: none;
+    text-align: center;
+    margin-top: 20%;
+}
+
+  .container-account h2 {
+    display: inline;
+    padding-left: 45px;
+    user-select: none;
+}
+
+.container-account h4 {
+    font-size: 10px;
+    font-weight: 100;
+    padding-bottom: 20%;
+    padding-top: 10px;
+    color: var(--text-primary);
+}
+
+.account-save {
+  color: var(--text-primary);
+}
+  
+  .container-account input[type="text"],
+  .container-account input[type="password"],
+  .container-account input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: var(--sidebar-color);
+    transition: var(--tran-02);
+    box-sizing: border-box;
+  }
+  
+  .container-account input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }

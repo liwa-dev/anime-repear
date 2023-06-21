@@ -1,0 +1,7 @@
+:root {
+    --green: #1DB954;
+    --black: #191414;
+    --lightblack: #121212;
+    --hoverno: rgba(255, 255, 255, 0.5);
+    --hoveryes: rgba(255, 255, 255, 1);
+}
