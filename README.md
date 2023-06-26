@@ -24,4 +24,4 @@ Contributions are welcome! If you'd like to contribute to Anime Repear, please f
 
 ## License
 
-This project is licensed under the [MIT License](license).
+This project is currently unfinished and uncompleted. No permissions are granted for usage, modification, or distribution. Please note that this statement may change in the future as the project progresses. For more information, please refer to the [License](license) file.
