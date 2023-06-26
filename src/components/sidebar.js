@@ -11,6 +11,7 @@ const [isCooldown, setIsCooldown] = useState(false);
 
         const sideBar = document.querySelector(".sidebar");
         sideBar.classList.toggle("close");
+        
         setIsPanelClose((prevIsPanelClose) => !prevIsPanelClose);
         document.querySelector('.toggle').style.opacity = '.5';
 

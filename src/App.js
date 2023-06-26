@@ -1,3 +1,20 @@
+/*
+  * Project: My Unfinished Project
+  * Author: liwa-dev
+  * Watermark:
+*/
+
+/***
+ *    ██╗     ██╗██╗    ██╗ █████╗       ██████╗ ███████╗██╗   ██╗
+ *    ██║     ██║██║    ██║██╔══██╗      ██╔══██╗██╔════╝██║   ██║
+ *    ██║     ██║██║ █╗ ██║███████║█████╗██║  ██║█████╗  ██║   ██║
+ *    ██║     ██║██║███╗██║██╔══██║╚════╝██║  ██║██╔══╝  ╚██╗ ██╔╝
+ *    ███████╗██║╚███╔███╔╝██║  ██║      ██████╔╝███████╗ ╚████╔╝ 
+ *    ╚══════╝╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝      ╚═════╝ ╚══════╝  ╚═══╝  
+ *                                                                
+ */
+
+
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Startup from './components/startup';
 import Dashboard from './components/dashboard';

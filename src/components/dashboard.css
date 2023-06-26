@@ -410,6 +410,10 @@ body.dark .switch::before {
     padding: 8px 40px;
     z-index: 200;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
 }
 
 .search-box a {

@@ -21,8 +21,9 @@ export default function MenuLogin({
     };
     return (
       <Popover ref={ref} className={className} style={{ left, top }} full>
-        <Dropdown.Menu onSelect={handleSelect}>
+        <Dropdown.Menu onSelect={handleSelect} placement='leftStart'>
           <Dropdown.Item eventKey={0}>List (soon)</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
           <Dropdown.Item
             eventKey={1}
             onClick={() => {
@@ -39,30 +40,8 @@ export default function MenuLogin({
   };
 
   return (
-    <>
-      <br />
-      {isPanelClose ? (
-        <Whisper placement="bottomStart" trigger="click" speaker={renderMenu}>
-          <IconButton style={{color: 'var(--primary-color) !important'}} appearance="primary" icon={<MenuIcon style={{ color: 'white' }} />} circle />
-        </Whisper>
-      ) : (
-<Dropdown
-  title="Account"
-  className='custom-dropdown'
->
-  <Dropdown.Item>List (soon)</Dropdown.Item>
-  <Dropdown.Item
-    onClick={() => {
-      signOut();
-      handleClose();
-      setIsCategorySet(false);
-    }}
-  >
-    Logout
-  </Dropdown.Item>
-</Dropdown>
-
-      )}
-    </>
+    <Whisper placement="leftStart" trigger="click" speaker={renderMenu}>
+    <IconButton className='menuUser' style={{color: 'var(--primary-color) !important', borderRadius: '20% !important'}} appearance="primary" icon={<MenuIcon style={{ color: 'white' }} />} circle />
+  </Whisper>
   );
 }

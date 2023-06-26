@@ -344,9 +344,30 @@ export default function Dashboard() {
                 <span className="switch"></span>
               </div>
             </li>
-            <ul>
-              <li className="nav-link flex-column">
-                {auth()?.user ?
+          </div>
+        </div>
+      </nav>
+
+      <section className="home">
+        <div className="textPath">
+          <ol className="itemsPath">
+            <li>
+              <Link
+                to={`/dashboard/${activeCategory}`}
+                className="hre"
+                onClick={(e) => {
+                  //e.preventDefault();
+                }}
+              >
+                {categoryText}
+              </Link>
+            </li>
+            {/* {WATCH} ELEMENT */}
+            <li></li>
+            {/* {ANIMETITLE} ELEMENT */}
+            <li></li>
+          </ol>
+          {auth()?.user ?
                   (
                     
                     <div className="logged-in-menu">
@@ -372,12 +393,6 @@ export default function Dashboard() {
                         handleCategoryClick("account");
                       }}
                     >
-                      {isPanelClose ? ( 
-                        <IconButton>
-                        <AccountBoxIcon 
-                        style={{color : 'var(--primary-color)', fontSize: 40}}/>
-                        </IconButton>
-                      ) : (
                         <Button
                         color="primary"
                         style={{backgroundColor: "var(--primary-color)", color: "var(--text-primary)"}}
@@ -385,7 +400,6 @@ export default function Dashboard() {
                         size="small"
                         variant="contained"
                       >Sign in</Button>
-                      )}
                     </Link>
                   </li>                  
                     </ul>
@@ -393,31 +407,6 @@ export default function Dashboard() {
                   )
 
                 }
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <section className="home">
-        <div className="textPath">
-          <ol className="itemsPath">
-            <li>
-              <Link
-                to={`/dashboard/${activeCategory}`}
-                className="hre"
-                onClick={(e) => {
-                  //e.preventDefault();
-                }}
-              >
-                {categoryText}
-              </Link>
-            </li>
-            {/* {WATCH} ELEMENT */}
-            <li></li>
-            {/* {ANIMETITLE} ELEMENT */}
-            <li></li>
-          </ol>
         </div>
         <Routes>
           {/* <Route path="/" element={<Navigate to="/home" />} /> */}
