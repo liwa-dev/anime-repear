@@ -4,7 +4,7 @@
 
 ## Description
 
-Anime Repear is a web application (currently unfinished and uncompleted) that aims to allow users to explore and discover anime series and watching episodes. It provides a user-friendly interface to search for anime, view details, and save favorites for later.
+Development for Anime Repear began 4 months ago, making it an ongoing and uncompleted project. Despite being a work in progress, it already demonstrates a promising vision. Anime Repear is a dynamic web application that empowers users to explore and discover a wide range of anime series while enjoying their favorite episodes. The application features an intuitive interface, enabling users to effortlessly search for anime, access comprehensive details, and conveniently save their favorites for future enjoyment. Although unfinished, Anime Repear is committed to providing an exceptional user experience, and future updates are planned to enhance its functionality.
 
 ## Features
 
